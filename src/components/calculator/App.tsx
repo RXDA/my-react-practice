@@ -1,9 +1,10 @@
 import React from "react";
 import {useState} from "react";
-import {calculate} from "../logic/calculate";
-import {ButtonPanel} from "./buttonPanel";
-import {Display} from "./display";
+import {calculate} from "./logic/calculate";
+import {ButtonPanel} from "./components/buttonPanel";
+import {Display} from "./components/display";
 import "./App.css"
+import "./index.css"
 
 export const App = () => {
     const [total, setTotal] = useState("")
