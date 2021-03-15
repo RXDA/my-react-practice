@@ -1,10 +1,11 @@
+/** @jsx jsx */
 import React from "react";
 import {useState} from "react";
 import {calculate} from "./logic/calculate";
 import {ButtonPanel} from "./components/buttonPanel";
 import {Display} from "./components/display";
-import "./App.css"
-import "./index.css"
+import {css, Global, jsx} from "@emotion/react";
+import {IndexCss} from "./css";
 
 export const App = () => {
     const [total, setTotal] = useState("")
@@ -21,7 +22,13 @@ export const App = () => {
     }
 
     return (
-        <div className={"component-app"}>
+        <div css={css`
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          height: 100%;
+        `}>
+            <Global styles={IndexCss}/>
             <Display value={next || total || "0"}/>
             <ButtonPanel clickHandler={handleClick}/>
         </div>

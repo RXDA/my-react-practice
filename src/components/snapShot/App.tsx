@@ -1,3 +1,4 @@
+/** @jsx jsx */
 import React from "react"
 import PhotoContextProvider from "./context/PhotoContext";
 import {HashRouter, Route, Switch, Redirect} from "react-router-dom";
@@ -5,8 +6,8 @@ import Header from "./components/Header";
 import Item from "./components/Item";
 import Search from "./components/Search";
 import NotFound from "./components/NotFound";
-import "./App.css"
-import "./index.css"
+import {css, Global, jsx} from "@emotion/react";
+import {appCss, indexCss} from "./css";
 
 export const App = () => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>, history: string[], searchInput: string) => {
@@ -20,6 +21,10 @@ export const App = () => {
         <PhotoContextProvider>
             <HashRouter basename="/SnapScout">
                 <div className="container">
+                    <Global styles={css`
+                      ${appCss};
+                      ${indexCss};
+                    `}/>
                     <Route render={
                         props => (
                             <Header handleSubmit={handleSubmit} history={props.history}/>

@@ -1,11 +1,55 @@
+import {css} from "@emotion/react";
 
-body {
+export const appCss = css`
+  .App {
+    text-align: center;
+  }
+
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+`
+
+
+export const indexCss = css`
+  .App {
     text-align: center;
     font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
     color: #3f4850;
-}
+  }
 
-.forkongithub a {
+  .forkongithub a {
     background: #000;
     color: #fff;
     text-decoration: none;
@@ -17,15 +61,15 @@ body {
     line-height: 2rem;
     position: relative;
     transition: 0.5s;
-}
+  }
 
-.forkongithub a:hover {
+  .forkongithub a:hover {
     background: #c11;
     color: #fff;
-}
+  }
 
-.forkongithub a::before,
-.forkongithub a::after {
+  .forkongithub a::before,
+  .forkongithub a::after {
     content: "";
     width: 100%;
     display: block;
@@ -34,36 +78,36 @@ body {
     left: 0;
     height: 1px;
     background: #fff;
-}
+  }
 
-.forkongithub a::after {
+  .forkongithub a::after {
     bottom: 1px;
     top: auto;
-}
+  }
 
-h2 {
+  .App.h2 {
     font-size: 2em;
     margin: 52px 0 40px;
     text-transform: capitalize;
     color: #051c33;
-}
+  }
 
-h1 {
+  h1 {
     font-family: "Lobster", "Josefin Sans", Helvetica, Arial, sans-serif;
     font-size: 4em;
     color: #051c33;
-}
+  }
 
-ul {
+  ul {
     list-style-type: none;
     padding-left: 0;
-}
+  }
 
-a {
+  a {
     text-decoration: none;
-}
+  }
 
-.is-hidden {
+  .is-hidden {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -72,28 +116,28 @@ a {
     padding: 0;
     position: absolute;
     width: 1px;
-}
+  }
 
-.search-form {
+  .search-form {
     max-width: 460px;
     display: flex;
     margin: 0 auto 32px;
-}
+  }
 
-.search-form button {
+  .search-form button {
     outline: none;
     border: none;
     padding: 0px 15px;
     border-radius: 0 0.35em 0.35em 0;
     cursor: pointer;
-}
+  }
 
-.active {
+  .active {
     background-color: #051c33;
     cursor: pointer;
-}
+  }
 
-input {
+  input {
     font-size: 1em;
     width: 100%;
     background-color: #edeff0;
@@ -102,56 +146,56 @@ input {
     border-right: none;
     border-radius: 0.35em 0 0 0.35em;
     outline: none;
-}
+  }
 
-.main-nav li {
+  .main-nav li {
     width: 100%;
     margin-bottom: 1em;
-}
+  }
 
-.main-nav a {
+  .main-nav a {
     display: block;
     background: #051c33;
     border-radius: 3px;
     padding: 5px;
     color: #fff;
-}
+  }
 
-.main-nav .active,
-.main-nav a:hover {
+  .main-nav .active,
+  .main-nav a:hover {
     background-color: #051c33;
-}
+  }
 
-.photo-container ul {
+  .photo-container ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     -ms-align-items: flex-start;
     align-items: flex-start;
-}
+  }
 
-.photo-container ul li {
+  .photo-container ul li {
     width: 220px;
     height: 165px;
     overflow: hidden;
     margin-bottom: 15px;
-}
+  }
 
-.photo-container ul img {
+  .photo-container ul img {
     width: 100%;
     transform: scale(1.25);
     transition: transform 1.25s;
-}
+  }
 
-.photo-container li:hover img {
+  .photo-container li:hover img {
     transform: scale(1.65);
-}
+  }
 
-.photo-container .not-found {
+  .photo-container .not-found {
     width: 100%;
-}
+  }
 
-.loader {
+  .loader {
     border: 16px solid #f3f3f3;
     /* Light grey */
     border-top: 16px solid #051c33;
@@ -162,75 +206,76 @@ input {
     animation: spin 2s linear infinite;
     margin-left: auto;
     margin-right: auto;
-}
+  }
 
-@keyframes spin {
+  @keyframes spin {
     0% {
-        transform: rotate(0deg);
+      transform: rotate(0deg);
     }
 
     100% {
-        transform: rotate(360deg);
+      transform: rotate(360deg);
     }
-}
+  }
 
-.not-found {
+  .not-found {
     padding-top: 5%;
-}
+  }
 
-@media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 767px) {
     body {
-        padding-top: 2em;
+      padding-top: 2em;
     }
 
     .photo-container li {
-        margin: auto;
+      margin: auto;
     }
-}
+  }
 
-@media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     body {
-        padding-top: 4em;
+      padding-top: 4em;
     }
 
     .container {
-        max-width: 960px;
-        margin: auto;
+      max-width: 960px;
+      margin: auto;
     }
 
     .main-nav ul {
-        display: flex;
-        justify-content: center;
+      display: flex;
+      justify-content: center;
     }
 
     .main-nav li {
-        margin: 10px;
-        width: 100px;
+      margin: 10px;
+      width: 100px;
     }
-}
+  }
 
-@media screen and (min-width: 800px) {
+  @media screen and (min-width: 800px) {
     .forkongithub {
-        position: fixed;
-        display: block;
-        top: 0;
-        right: 0;
-        width: 200px;
-        overflow: hidden;
-        height: 200px;
-        z-index: 9999;
+      position: fixed;
+      display: block;
+      top: 0;
+      right: 0;
+      width: 200px;
+      overflow: hidden;
+      height: 200px;
+      z-index: 9999;
     }
 
     .forkongithub a {
-        width: 200px;
-        position: absolute;
-        top: 60px;
-        right: -60px;
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+      width: 200px;
+      position: absolute;
+      top: 60px;
+      right: -60px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
     }
-}
+  }
+`
