@@ -10,6 +10,7 @@ import {Exercise2} from "./components/11_events/exercise2";
 import {SomeForm, SomeMultipleInputForm} from "./components/13-uncotrolled-components/uncontrolledForm"
 import {SomeAxiosJS} from "./components/15-3rd-part-package/axios-js"
 import {SomeAxios} from "./components/15-3rd-part-package/axios"
+import {SomeBrowserRouter, SomeNavLinkRouter} from "./components/17-router/broswer_router";
 
 // function App() {
 //     return (
@@ -54,7 +55,7 @@ import {SomeAxios} from "./components/15-3rd-part-package/axios"
 
 const App = () => {
     return (
-        <SomeAxios/>
+        <SomeNavLinkRouter/>
     )
 }
 
