@@ -7,7 +7,9 @@ import {HashRouter, Link, Route, Switch} from "react-router-dom";
 import SubscribePage from "./components/react03/exercise2";
 import {Resume} from "./components/react03/exercise3";
 import {Exercise2} from "./components/11_events/exercise2";
-
+import {SomeForm, SomeMultipleInputForm} from "./components/13-uncotrolled-components/uncontrolledForm"
+import {SomeAxiosJS} from "./components/15-3rd-part-package/axios-js"
+import {SomeAxios} from "./components/15-3rd-part-package/axios"
 
 // function App() {
 //     return (
@@ -52,7 +54,7 @@ import {Exercise2} from "./components/11_events/exercise2";
 
 const App = () => {
     return (
-        <Exercise2/>
+        <SomeAxios/>
     )
 }
 
