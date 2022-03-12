@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, NavLink, Route, Switch} from 'react-router-dom'
+import {BrowserRouter as Router, NavLink, Route, Switch,} from 'react-router-dom'
 
 // Home component
 const Home = () => <h1>Welcome Home</h1>
@@ -30,8 +30,8 @@ export const SomeBrowserRouter = () => {
     )
 }
 
-const Navbar = ()=>{
-    return(
+const Navbar = () => {
+    return (
         <ul>
             <li>
                 <NavLink to='/'>Home</NavLink>
@@ -49,17 +49,17 @@ const Navbar = ()=>{
     )
 }
 
-export const SomeNavLinkRouter = ()=>{
+export const SomeNavLinkRouter = () => {
     return (
         <Router>
             <div className='App'>
                 <Navbar/>
                 <Switch>
-                    <Route path='/about' component={About} />
-                    <Route path='/contact' component={Contact} />
-                    <Route path='/challenges' component={Challenges} />
-                    <Route exact path='/' component={Home} />
-                    <Route component={NotFound} />
+                    <Route path='/' component={Home}/>
+                    <Route path='/about' component={About}/>
+                    <Route path='/contact' component={Contact}/>
+                    <Route path='/challenges' component={Challenges}/>
+                    <Route component={NotFound}/>
                 </Switch>
             </div>
         </Router>
